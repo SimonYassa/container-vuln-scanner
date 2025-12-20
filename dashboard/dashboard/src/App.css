@@ -1,0 +1,194 @@
+/* ==========================
+   GLOBAL STYLING
+========================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ==========================
+   TABLE STYLING
+========================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* ==========================
+   SEVERITY COLORS
+========================== */
+.low {
+  background-color: #d4edda; /* green */
+  color: #155724;
+  font-weight: bold;
+  text-align: center;
+}
+
+.medium {
+  background-color: #fff3cd; /* yellow */
+  color: #856404;
+  font-weight: bold;
+  text-align: center;
+}
+
+.high {
+  background-color: #f8d7da; /* red */
+  color: #721c24;
+  font-weight: bold;
+  text-align: center;
+}
+
+.critical {
+  background-color: #721c24; /* dark red */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ==========================
+   EMPTY TABLE / LOADING
+========================== */
+td[colspan="4"] {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+}
+
+/* Spinner */
+.spinner {
+  margin: 50px auto;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #4f46e5;
+  border-radius: 100%;
+  display: inline-block;
+  animation: bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 { animation-delay: -0.32s; }
+.spinner .bounce2 { animation-delay: -0.16s; }
+
+@keyframes bouncedelay {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Dashboard container */
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Search */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Table */
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+}
+
+/* Severity colors */
+.severity.low { color: #28a745; font-weight: bold; }
+.severity.medium { color: #ffc107; font-weight: bold; }
+.severity.high { color: #dc3545; font-weight: bold; }
+.severity.critical { color: #721c24; font-weight: bold; }
+
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 768px) {
+  table, th, td {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 12px;
+  }
+  th, td {
+    padding: 6px;
+  }
+}

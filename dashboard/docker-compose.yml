@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./backend
+    container_name: container-vuln-scanner-backend
+    ports:
+      - "8000:8000"
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+
+  dashboard:
+    build: ./dashboard
+    container_name: container-vuln-scanner-dashboard
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_API_URL=http://backend:8000
+    depends_on:
+      - backend
